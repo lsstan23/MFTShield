@@ -1,0 +1,8 @@
+﻿"Timestamp,User,Source_IP,Destination_IP,File_Name,Status,Transfer_Type,Encryption,Size_MB"
+"2025-04-18 10:05:23,admin_user,192.168.1.100,10.0.0.15,financial_report.pdf,SUCCESS,SFTP,AES-256,5.4"
+"2025-04-18 10:07:45,user1,192.168.1.105,10.0.0.20,confidential_data.zip,FAILURE,FTPS,AES-128,20.1"
+"2025-04-18 10:10:12,user2,192.168.1.110,10.0.0.22,customer_records.xlsx,SUCCESS,SCP,AES-256,8.7"
+"2025-04-18 10:15:30,service_bot,192.168.1.200,10.0.0.30,backup_2025-04-18.tar.gz,SUCCESS,HTTPS,TLS 1.3,50.3"
+"2025-04-18 10:18:55,user3,192.168.1.115,10.0.0.25,credentials.docx,FAILURE,SFTP,AES-256,3.2"
+"2025-04-18 10:25:40,security_admin,192.168.1.120,10.0.0.40,security_patch_v3.bin,SUCCESS,FTP,PGP,12.5"
+"2025-04-18 10:30:05,service_bot,192.168.1.200,10.0.0.30,weekly_backup.tar.gz,SUCCESS,HTTPS,TLS 1.3,55.0"

@@ -1,0 +1,79 @@
+[
+  {
+    "Timestamp": "2025-04-18 10:05:23",
+    "User": "admin_user",
+    "Source_IP": "192.168.1.100",
+    "Destination_IP": "10.0.0.15",
+    "File_Name": "financial_report.pdf",
+    "Status": "SUCCESS",
+    "Transfer_Type": "SFTP",
+    "Encryption": "AES-256",
+    "Size_MB": 5.4
+  },
+  {
+    "Timestamp": "2025-04-18 10:07:45",
+    "User": "user1",
+    "Source_IP": "192.168.1.105",
+    "Destination_IP": "10.0.0.20",
+    "File_Name": "confidential_data.zip",
+    "Status": "FAILURE",
+    "Transfer_Type": "FTPS",
+    "Encryption": "AES-128",
+    "Size_MB": 20.1
+  },
+  {
+    "Timestamp": "2025-04-18 10:10:12",
+    "User": "user2",
+    "Source_IP": "192.168.1.110",
+    "Destination_IP": "10.0.0.22",
+    "File_Name": "customer_records.xlsx",
+    "Status": "SUCCESS",
+    "Transfer_Type": "SCP",
+    "Encryption": "AES-256",
+    "Size_MB": 8.7
+  },
+  {
+    "Timestamp": "2025-04-18 10:15:30",
+    "User": "service_bot",
+    "Source_IP": "192.168.1.200",
+    "Destination_IP": "10.0.0.30",
+    "File_Name": "backup_2025-04-18.tar.gz",
+    "Status": "SUCCESS",
+    "Transfer_Type": "HTTPS",
+    "Encryption": "TLS 1.3",
+    "Size_MB": 50.3
+  },
+  {
+    "Timestamp": "2025-04-18 10:18:55",
+    "User": "user3",
+    "Source_IP": "192.168.1.115",
+    "Destination_IP": "10.0.0.25",
+    "File_Name": "credentials.docx",
+    "Status": "FAILURE",
+    "Transfer_Type": "SFTP",
+    "Encryption": "AES-256",
+    "Size_MB": 3.2
+  },
+  {
+    "Timestamp": "2025-04-18 10:25:40",
+    "User": "security_admin",
+    "Source_IP": "192.168.1.120",
+    "Destination_IP": "10.0.0.40",
+    "File_Name": "security_patch_v3.bin",
+    "Status": "SUCCESS",
+    "Transfer_Type": "FTP",
+    "Encryption": "PGP",
+    "Size_MB": 12.5
+  },
+  {
+    "Timestamp": "2025-04-18 10:30:05",
+    "User": "service_bot",
+    "Source_IP": "192.168.1.200",
+    "Destination_IP": "10.0.0.30",
+    "File_Name": "weekly_backup.tar.gz",
+    "Status": "SUCCESS",
+    "Transfer_Type": "HTTPS",
+    "Encryption": "TLS 1.3",
+    "Size_MB": 55.0
+  }
+]
