@@ -1,0 +1,48 @@
+import streamlit as st
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.ensemble import IsolationForest
+
+st.set_page_config(layout="wide")
+st.title("🚨 Real-Time Anomaly Detection in MFT Logs")
+
+# Load uploaded sample CSV
+@st.cache_data
+def load_data():
+    df = pd.read_csv("sample_mft_logs.csv")
+    return df
+
+df = load_data()
+
+# Run Isolation Forest for anomaly detection
+model = IsolationForest(contamination=0.02, random_state=42)
+features = df.drop(columns=["label"])
+df["anomaly_score"] = model.fit_predict(features)
+df["detected_anomaly"] = df["anomaly_score"].apply(lambda x: 1 if x == -1 else 0)
+
+# Metrics
+true_positives = sum((df["label"] == 1) & (df["detected_anomaly"] == 1))
+false_positives = sum((df["label"] == 0) & (df["detected_anomaly"] == 1))
+false_negatives = sum((df["label"] == 1) & (df["detected_anomaly"] == 0))
+precision = true_positives / (true_positives + false_positives + 1e-5)
+recall = true_positives / (true_positives + false_negatives + 1e-5)
+
+# Display metrics
+st.metric("Precision", f"{precision:.2f}")
+st.metric("Recall", f"{recall:.2f}")
+
+# Visualization
+st.subheader("📈 Anomaly Visualization (File Size vs Transfer Time)")
+fig, ax = plt.subplots(figsize=(10, 6))
+sns.scatterplot(
+    x="file_size_MB", y="transfer_time_sec",
+    hue="detected_anomaly", style="label", palette="coolwarm", data=df, ax=ax
+)
+plt.title("Anomaly Detection: File Size vs Transfer Time")
+plt.grid(True)
+st.pyplot(fig)
+
+# Display data
+st.subheader("📋 Sample Logs with Anomaly Flags")
+st.dataframe(df.head(20))
